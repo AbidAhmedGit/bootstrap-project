@@ -30,12 +30,50 @@
         </div>
     </header>
 
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- ------------------NAVBAR START------------------------------------------ -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+
+            <!-- add responsive behavior to the Navbar by adding the following 
+                code for a button just below the <nav> start tag: -->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- collapse and navbar-collapse classes -->
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    <!-- ------------------NAVBAR END------------------------------------------ -->
+    <!-- -------------------------------------------------------------------------- -->
+
     <div class="container container-fluid">
         <div class="row">
             <!-- T2: The “About Us” title and the "Community Partners" 
             section both stretch across the entire width of their row. -->
+
+
+            <!-- -------------------------------------------------- -->
+            <!-- --------------------BREADCRUMBS--------------- -->
             <div class="col-12">
-               <h2>About Us</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">About</li>
+                </ol>
+            <!-- --------------------BREADCRUMBS--------------- -->
+            <!-- -------------------------------------------------- -->
+
+            
+                <h2>About Us</h2>
                <hr />
             </div>
         </div>
@@ -83,8 +121,8 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
                         <li><a href="#">Sites</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
