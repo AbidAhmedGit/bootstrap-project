@@ -11,7 +11,7 @@
  
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <!-- the Google Font Lobster -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"/>
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>NuCamp: A Better Way To Camp</title>
@@ -56,7 +56,7 @@
     <!-- ------------------NAVBAR END------------------------------------------ -->
     <!-- -------------------------------------------------------------------------- -->
 
-    <div class="container container-fluid">
+    <div class="container">
         <div class="row">
             <!-- T2: The “About Us” title and the "Community Partners" 
             section both stretch across the entire width of their row. -->
@@ -64,7 +64,8 @@
 
             <!-- -------------------------------------------------- -->
             <!-- --------------------BREADCRUMBS--------------- -->
-            <div class="col-12">
+            <!-- just col works here as well -->
+            <div class="col-12"> 
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active">About</li>
@@ -96,6 +97,7 @@
         <div class="row row-content">
             <!-- T2: The “About Us” title and the "Community Partners" 
             section both stretch across the entire width of their row. -->
+            <!-- simply col works here as well -->
             <div class="col-12">
                 <!-- <hr /> -->
                 <h3>Community Partners</h3>
@@ -104,13 +106,13 @@
                     to the p elements containing the descriptions of the 
                     community partners so that they are hidden on only extra 
                     small screens.  -->
-                <p class='d-none d-sm-block'>Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
                 <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-                <p class='d-none d-sm-block'>Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
                 <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-                <p class='d-none d-sm-block'>Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
                 <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-                <p class='d-none d-sm-block'>From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
             </div>
         </div>
     </div>
@@ -121,7 +123,9 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <!-- delete a and class="nav-item"><a class="nav-link" href="index.html"> -->
+                        <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
+                        <!-- class="nav-item active"><a class="nav-link" href="#"> -->
                         <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
                         <li><a href="#">Sites</a></li>
                         <li><a href="#">Contact</a></li>
