@@ -25,6 +25,8 @@
 <body>
 
     <header class="jumbotron jumbotron-fluid">
+        
+
         <!-- container class contains both row and column -->
         <div class="container">
             <!-- row class contains column -->
@@ -39,8 +41,15 @@
                 <!-- col class contains data -->
                 <div class="col">
                     <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
+                    <h2>a better way to camp</h2>                    
                 </div>
+
+                <!--W2 T3: use an anchor element to add a button that when clicked, 
+                    takes the user to the reservation form at the bottom of the page.  -->
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <a role="button" class="btn btn-link btn-info text-white btn-lg" href="#reserveForm">Reserve Campsite</a>
+                </div>
+
             </div>
         </div>
     </header>
@@ -107,10 +116,22 @@
             <div class="col-sm-4 col-md-3">
                 <h2>Featured Campsites</h2>
             </div>
+
+            <!-- W2 T1: Add an image to the "Featured Campsites" 
+                section and style it using image and media object classes. -->
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>                        
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React lake" />
+
+                </div>
             </div>
+            <!-- W2 T1: Add an image to the "Featured Campsites" 
+                section and style it using image and media object classes. -->
+
         </div>
 
         <div class="row row-content align-items-center">
@@ -133,6 +154,63 @@
 
 
         </div>
+
+        <!-- W2 T2: Create a reservation form and place it inside a Bootstrap card. -->
+        <div class="row row-content">
+            <div class="col col-sm-6 mx-auto">
+                <div class="card">
+                    <!-- Inside this card, add a h3 element with a card-header class, containing the text "Reserve a Campsite". -->
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+
+                        <!--w2 T3: add an id of "reserveForm" to form tag. -->
+                        <form id="reserveForm">
+
+                            <div class=" form-group row">
+                                <!-- <div class="col"> -->
+                                  
+                                <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+
+                                <!-- The corresponding column div with the select should take 
+                                    up what's left of the row, without needing to explicitly use a number. -->
+                                <div class="col">    
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
+
+                                <div class="col">
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit button" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- W2 T2: Create a reservation form and place it inside a Bootstrap card. -->
+
+
+    <!-- closing tag for the container div -->
     </div>
 
     <footer>
