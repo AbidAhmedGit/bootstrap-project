@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
- 
+
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <!-- font-awesome -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
@@ -31,7 +31,7 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-            </div> 
+            </div>
         </div>
     </header>
 
@@ -42,7 +42,7 @@
 
             <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
 
-            <!-- add responsive behavior to the Navbar by adding the following 
+            <!-- add responsive behavior to the Navbar by adding the following
                 code for a button just below the <nav> start tag: -->
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
             </div>
-            
+
         </div>
     </nav>
     <!-- ------------------NAVBAR END------------------------------------------ -->
@@ -65,14 +65,14 @@
 
     <div class="container">
         <div class="row">
-            <!-- T2: The “About Us” title and the "Community Partners" 
+            <!-- T2: The “About Us” title and the "Community Partners"
             section both stretch across the entire width of their row. -->
 
 
             <!-- -------------------------------------------------- -->
             <!-- --------------------BREADCRUMBS--------------- -->
             <!-- just col works here as well -->
-            <div class="col-12"> 
+            <div class="col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     <li class="breadcrumb-item active"><i class="fa fa-info fa-lg"></i> About</li>
@@ -80,23 +80,23 @@
             <!-- --------------------BREADCRUMBS--------------- -->
             <!-- -------------------------------------------------- -->
 
-            
+
                 <h2>About Us</h2>
                <hr />
             </div>
         </div>
-        
+
         <!-- T2: adding row-content -->
         <div class="row row-content">
 
-            <!-- T2: The “Our Mission” part occupies only 
+            <!-- T2: The “Our Mission” part occupies only
             half the width of the row for small to extra large screens.  -->
             <div class="col-sm-6">
                 <h3>Our Mission</h3>
                 <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
-                <!-- The hr element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition 
+                <!-- The hr element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition
                     to another topic within a section -->
-                
+
             </div>
 
             <div class="col-sm-6">
@@ -126,31 +126,106 @@
                             </footer>
                         </blockquote>
                     </div>
-                </div>   
-            </div> 
+                </div>
+            </div>
 
         </div>
-        
+
         <!-- T2: adding row-content -->
         <div class="row row-content">
-            <!-- T2: The “About Us” title and the "Community Partners" 
+            <!-- T2: The “About Us” title and the "Community Partners"
             section both stretch across the entire width of their row. -->
             <!-- simply col works here as well -->
             <div class="col-12">
                 <!-- <hr /> -->
+
+                <!-- Add a tabbed interface to the Community Partners section  -->
+
+                <!-- start setting up a tabbed interface by adding an HTML unordered list: -->
+                <!-- add the nav class to the ul element. Next, you can add the nav-tabs class as well.
+                    Then, go through and add the nav-item class to each listitem element. -->
+                <!-- surround each Community Partner name inside the listitems with an anchor tag with
+                    the nav-link class and hrefs to #bootstrap, #git, #mongo, and #node,
+                    the role of "tab", and the data-toggle of "tab", as follows: -->
+
+                <!-- Add a tabbed interface to the Community Partners section  -->
                 <h3>Community Partners</h3>
-                <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
-                <!--T3: apply the d-none and d-sm-block Bootstrap responsive classes 
-                    to the p elements containing the descriptions of the 
-                    community partners so that they are hidden on only extra 
+
+
+
+                <!--T3: apply the d-none and d-sm-block Bootstrap responsive classes
+                    to the p elements containing the descriptions of the
+                    community partners so that they are hidden on only extra
                     small screens.  -->
-                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
-                <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-                <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
-                <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-                <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
-                <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-                <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+
+                <!-- Add Tab content -->
+                <!-- Surround all the content in a tab-content div -->
+                <!-- surround each set of h4 name and p description with a div that has the role of tabpanel
+                    and the classes of tab-pane and fade. For the first tab-pane,
+                    also add the classes of show and active so that
+                    it shows up as the default when the page is loaded.
+                    Also add an id to each, as shown below: -->
+
+                <!-- Add Tab content -->
+
+                <div id="accordion">
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a data-toggle="collapse" data-target="#bootstrap">
+                                    Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
+                                </a>
+                            </h4>
+                            <div class="collapse show" id="bootstrap" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#git">
+                                    Git Out Expeditions <small>Group Adventure Expeditions</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="git" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#mongo">
+                                    Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="mongo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div role="tab" class="card-header">
+                            <h4>
+                                <a class="collapsed" data-toggle="collapse" data-target="#node">
+                                    Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small>
+                                </a>
+                            </h4>
+                            <div class="collapse" id="node" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
 
@@ -188,7 +263,7 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>                
+                </div>
             </div>
        </div>
 
@@ -200,10 +275,12 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <!-- delete a and class="nav-item"><a class="nav-link" href="index.html"> -->
+                        <!-- delete a and class="nav-item"><a class="nav-link" href="index.html">
                         <li class="nav-item"><a class="nav-link" href="index.html"> Home</a></li>
-                        <!-- class="nav-item active"><a class="nav-link" href="#"> -->
-                        <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+                        class="nav-item active"><a class="nav-link" href="#">
+                        <li class="nav-item active"><a class="nav-link" href="#">About</a></li> -->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
                         <li><a href="#">Sites</a></li>
                         <li><a href="contactus.html">Contact</a></li>
                     </ul>
