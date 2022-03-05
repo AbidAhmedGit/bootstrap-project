@@ -47,12 +47,95 @@
                 <!--W2 T3: use an anchor element to add a button that when clicked,
                     takes the user to the reservation form at the bottom of the page.  -->
                 <div class="col-12 col-md-4 col-xl-2 mt-4">
-                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
+                    <!-- removed part: data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>" -->
+                    <!-- removed part: href="#reserveForm" -->
+                    <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
                 </div>
 
             </div>
         </div>
     </header>
+
+
+    <!-- W3: Task2- create new modal and move reservation form to it  -->
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+
+                            <div class=" form-group row">
+                                <!-- <div class="col"> -->
+
+                                <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+
+                                <!-- The corresponding column div with the select should take
+                                    up what's left of the row, without needing to explicitly use a number. -->
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
+
+                                <div class="col">
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+
+                            <!-- W3: T3- tent/ rv button group choice  -->
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Campsite Type</label>
+
+                                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off"> RV
+                                    </label>
+
+
+                                </div>
+                            </div>
+
+                            <!-- W3: T3- tent/ rv button group choice  -->
+
+
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- W3: Task2- create new modal and move reservation form to it  -->
 
 
     <!-- -------------------------------------------------------------------------- -->
@@ -274,24 +357,28 @@
         </div>
 
         <!-- W2 T2: Create a reservation form and place it inside a Bootstrap card. -->
-        <div class="row row-content">
+
+        <!-- At the bottom of the page, delete any remaining code for the reservation form that was there, including the row, column, card, form,
+            and other elements that used to contain the form contents that you moved to the modal. -->
+
+        <!-- <div class="row row-content">
             <div class="col-sm-6 mx-auto">
                 <div class="card">
-                    <!-- Inside this card, add a h3 element with a card-header class, containing the text "Reserve a Campsite". -->
+                    Inside this card, add a h3 element with a card-header class, containing the text "Reserve a Campsite".
                     <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
                     <div class="card-body">
 
-                        <!--w2 T3: add an id of "reserveForm" to form tag. -->
+                        w2 T3: add an id of "reserveForm" to form tag.
                         <form id="reserveForm">
 
                             <div class=" form-group row">
-                                <!-- <div class="col"> -->
+                                <div class="col">
 
                                 <label class="col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
 
-                                <!-- The corresponding column div with the select should take
+                                 The corresponding column div with the select should take
                                     up what's left of the row, without needing to explicitly use a number. -->
-                                <div class="col">
+                                <!-- <div class="col">
                                     <select name="numCampers" id="numCampers" class="form-control">
                                         <option>Select...</option>
                                         <option value="1">1</option>
@@ -302,11 +389,11 @@
                                         <option value="6">6</option>
                                     </select>
 
-                                </div>
+                                </div> -->
 
-                            </div>
+                            <!-- </div> -->
 
-                            <div class="form-group row">
+                            <!-- <div class="form-group row">
                                 <label class="col-12 col-sm-6 col-form-label" for="date">Date</label>
 
                                 <div class="col">
@@ -318,13 +405,13 @@
                                 <div class="col">
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
-                            </div>
+                            </div> -->
 
-                        </form>
-                    </div>
+                        <!-- </form> -->
+                    <!-- </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- W2 T2: Create a reservation form and place it inside a Bootstrap card. -->
 
 
@@ -370,11 +457,13 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
+
+    <!-- removing the javascript tooltip -->
+    <!-- <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-    </script>
+    </script> -->
 
 </body>
 
