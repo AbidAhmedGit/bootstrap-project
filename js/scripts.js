@@ -16,14 +16,14 @@ $(function() {
     // W4 t2
     $("#reserveButton").click(function(){
         // $('#reserveModal').modal('toggle')
-        $('#reserveModal').modal('show')
+        $("#reserveModal").modal("show");
     });
 
 
     // $("#loginButton").click(modal('show'));
     $("#loginButton").click(function(){
         // $('#loginModal').modal('toggle')
-        $('#loginModal').modal('show')
+        $("#loginModal").modal("show");
     });
 
 });
